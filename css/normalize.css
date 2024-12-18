@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 62.5%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f1f1f1;
+}
+
+@font-face {
+    font-family: "Bebas";
+    src: url(fonts/Bebas.ttf);
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url(fonts/Oswald.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat.ttf);
+}
+
+:root {
+    --title: "Bebas";
+    --subtitle: "Montserrat";
+    --text: "Oswald";
+
+    --colorBg: #f1f1f1;
+    --colorSubtitle: #E108AB;
+    --colorText: #000;
+}
+
+.body__header {
+    width: 100vw;
+    height: 15vh;
+    background: var(--colorText);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body__header--title {
+    height: 8vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.body__header--title-pink {
+    width: 33%;
+    color: var(--colorSubtitle);
+    font-family: var(--title);
+    font-size: 2.5rem;
+    text-align: right;
+}
+
+.body__header--title-logo {
+    height: 12vh;
+    width: 33%;
+    margin: 0 auto;
+}
+
+.body__header--title-white {
+    width: 33%;
+    color: var(--colorBg);
+    font-family: var(--title);
+    font-size: 2.5rem;
+}
+
+.body__main {
+    width: 100vw;
+    height: 70vh;
+    padding: 2rem;
+}
+
+.body__footer {
+    width: 100vw;
+    height: 15vh;
+    background-color: var(--colorText);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.body__footer--link {
+    color: var(--colorSubtitle);
+    font-family: var(--text);
+    font-size: .9rem;
+    text-align: center;
+    width: 25%;
+}
