@@ -1,11 +1,12 @@
 .body__main--ctn {
     width: 95%;
+    height: 97%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow-y: auto;
+    overflow-y: hidden;
     position: relative;
 }
 
@@ -19,10 +20,12 @@
 
 .body__main--ctn-cards {
     width: 90%;
+    height: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 2.5%;
+    overflow-y: auto;
 }
 
 .body__main--ctn-cards-card {
@@ -45,12 +48,9 @@
 
 .body__modal {
     width: 80%;
-    height: 60%;
-    margin: 0 auto;
+    max-height: 60vh;
+    margin: auto;
     padding: .5rem;
-    position: absolute;
-    top: 20%;
-    overflow: auto;
 }
 
 .body__modal--title {
@@ -61,11 +61,32 @@
     margin-bottom: .5rem;
 }
 
-.body__modal--subtitle {
-    font-family: var(--text);
-    font-size: .8rem;
+.body__modal--ctn {
+    width: 95%;
+    height: 95%;
+    padding: .2rem;
+    overflow-y: auto;
 }
 
-.menus {
-    
+.body__modal--ctn-card {
+    width: 90%;
+    height: 2.3rem;
+    border: .25px solid var(--colorSubtitle);
+    border-radius: 5px;
+    padding: .25rem 0 .25rem 1rem;
+    background-color: var(--colorBg);
+    margin: .5rem auto;
+    display: flex;
 }
+
+.body__modal--ctn-card-name {
+    color: var(--colorSubtitle);
+    font-family: var(--subtitle);
+}
+
+.body__modal--ctn-card-composition {
+    font-family: var(--text);
+    font-size: .7rem;
+    font-style: italic;
+}
+
