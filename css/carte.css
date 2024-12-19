@@ -1,0 +1,71 @@
+.body__main--ctn {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    position: relative;
+}
+
+.body__main--ctn-title {
+    font-family: var(--subtitle);
+    color: var(--colorSubtitle);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: .5rem 0;
+}
+
+.body__main--ctn-cards {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 2.5%;
+}
+
+.body__main--ctn-cards-card {
+    width: 5.5rem;
+    height: 5.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(45, 81, 134);
+    padding: .2rem;
+    text-align: center;
+}
+
+.body__main--ctn-cards-card-title {
+    color: var(--colorBg);
+    font-family: var(--subtitle);
+    font-size: .7rem;
+    text-transform: uppercase;
+}
+
+.body__modal {
+    width: 80%;
+    height: 60%;
+    margin: 0 auto;
+    padding: .5rem;
+    position: absolute;
+    top: 20%;
+    overflow: auto;
+}
+
+.body__modal--title {
+    font-family: var(--subtitle);
+    color: var(--colorSubtitle);
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.body__modal--subtitle {
+    font-family: var(--text);
+    font-size: .8rem;
+}
+
+.menus {
+    
+}
