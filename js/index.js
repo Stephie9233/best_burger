@@ -649,7 +649,8 @@ function getCategoryByClick(targetElement) {
     // on construit la modale
     createContentModale(found) 
     // On affiche les sandwiches dans le ctn de la modale
-    //       
+    // 
+    return found;      
 };
    
 // Pour chaque sandwich de la catégorie on rajoute une carte au ctn
@@ -708,35 +709,126 @@ function closeModalByClick() {
     }    
 }
 
+function closeModalSandwichByClick() {
+    const close = document.querySelector(".close");
+    //console.log(closeElement);
+    close.addEventListener("click", () => {
+        console.log("alors, on veut fermer la modale ? Rêve !");
+        for(const element of contentModal) {
+            element.remove()
+            console.log("éléments supprimés");               
+        }
+        modalSandwich.close()            
+    })        
+}
+
 function openDetailsSandwich() {
     const cards = document.querySelectorAll(".body__modal--ctn-cards-card")
     console.log(cards);
+    const modalSandwich = document.querySelector(".body__modal--sandwich")
     for(const card of cards) {
         card.addEventListener("click", (e) => {
             const target = e.target;
-            console.log(target); 
-            getDetailsSandwich(target);           
+            //console.log(target); 
+            getDetailsSandwich(target);
+            modalSandwich.showModal()
+            document.querySelector("#close").addEventListener("click", () => {
+                console.log("click");
+                
+                modalSandwich.close()
+            })           
         })
-    }    
+    }
+
 }
 
 function getDetailsSandwich(target) {
+    const titleContent = document.querySelector(".body__modal--title").textContent;
+    console.log(titleContent);
+
     let value = target.firstChild.nodeValue;
-    console.log(value);
+   // console.log(value);
     if(value == undefined || value == null) {
         value = target.attributes[1].textContent;
-        console.log(value);       
+     //   console.log(value);       
     }
-    found = carte.find((el) => el.sandwiches.name.toUpperCase() === value.toUpperCase());
+    console.log(value);
     
+    const category = carte.find((el) => el.category.toUpperCase() == titleContent.toUpperCase());
+    
+    const found = category.sandwiches.find((el) => el.name.toUpperCase() == value.toUpperCase())
+    console.log(found); 
+    createContentModalSandwich(found)   
 }
 
-  
-
-
-
-// Gestion de l'affichage des modales au click
-
-// On écoute le click dans le ctn-cards
-
-// On ouvre la modale dont la class est identique à l'id
+function createContentModalSandwich(found) {
+    let line;
+    const closeCrossElement = document.createElement("p");
+    closeCrossElement.classList.add("close");    
+    closeCrossElement.textContent = "X";
+    closeCrossElement.id = "close";
+    close.push(closeCrossElement);
+    const imgElement = document.createElement("img");
+    imgElement.classList.add("body__modal--sandwich-img");
+    // pour le reset à la fermeture de la modale
+    imgElement.classList.add("variable");
+    imgElement.setAttribute("src", `${found.picture}`);
+    imgElement.setAttribute("alt", `photo ${found.name}`);
+    const ctnDetails = document.createElement("section");
+    ctnDetails.classList.add("body__modal--sandwich-ctn")
+    const title = document.createElement("h2");
+    title.classList.add("body__modal--sandwich-title");
+    title.textContent = found.name;
+    const ctnComposition = document.createElement("ul");
+    ctnComposition.classList.add("body__modal--sandwich-ctn-composition");
+    const composition = found.composition;
+    console.log(`composition: ${composition}`);
+    
+    let ingredients = ""
+    const last = composition.length-1;
+    const taille = found.composition.length;
+    console.log(typeof(found.composition));
+    
+    if(typeof(found.composition) == 'string') {
+        ingredients = found.composition;
+    } else {
+        for(const ingredient of composition) {
+            ingredients += `${ingredient}, `;
+            if(composition.indexOf(ingredient) == last) {
+                ingredients += `${ingredient}`;
+            }              
+            console.log(ingredients);
+            
+        };
+    }
+    
+    const compositionLine = document.createElement("li");
+    compositionLine.classList.add("body__modal--sandwich-ctn-composition-elt");
+    compositionLine.textContent = ingredients;
+    ctnComposition.appendChild(compositionLine)
+    const info = document.createElement("p");
+    info.classList.add("body__modal--sandwich-ctn-info");
+    info.textContent = "Nos sandwiches sont accompagnés d'une boisson et d'un accompagnement dans nos formules.";
+    const buttonMenu = document.createElement("button");
+    buttonMenu.classList.add("body__modal--sandwich-btn-menu");
+    buttonMenu.textContent = `${found.price_menu} €`;
+    const buttonSolo = document.createElement("button");
+    buttonSolo.classList.add("body__modal--sandwich-btn-solo");
+    buttonSolo.textContent = `${found.price} €`;
+    console.log(`prix solo : ${found.price_menu}`);
+    
+    const modalSandwich = document.querySelector(".body__modal--sandwich");
+    modalSandwich.appendChild(closeCrossElement);
+    modalSandwich.appendChild(imgElement);
+    ctnDetails.appendChild(title);
+    ctnDetails.appendChild(ctnComposition);
+    ctnDetails.appendChild(info);
+    ctnDetails.appendChild(buttonMenu);
+    ctnDetails.appendChild(buttonSolo);
+    modalSandwich.appendChild(ctnDetails);
+    if(found.price_menu == undefined || found.price_menu == null) {
+        buttonMenu.style.display = "none"
+    }
+    
+    
+};

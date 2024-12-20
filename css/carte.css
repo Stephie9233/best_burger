@@ -15,7 +15,7 @@
     color: var(--colorSubtitle);
     font-size: 1.5rem;
     text-transform: uppercase;
-    margin: .5rem 0;
+    margin: 1.5rem 0;
 }
 
 .body__main--ctn-cards {
@@ -46,7 +46,7 @@
     text-transform: uppercase;
 }
 
-.body__modal {
+.body__modal, .body__modal--sandwich {
     width: 80%;
     max-height: 60vh;
     margin: auto;
@@ -125,5 +125,59 @@
     font-family: var(--text);
     font-size: .7rem;
     font-style: italic;
+}
+
+.body__modal--sandwich-img {
+    width: 60%;
+    margin-left: 20%;
+    border-radius: 5px;
+    margin-bottom: 1.2rem;
+}
+
+.body__modal--sandwich-title {
+    color: var(--colorSubtitle);
+    font-family: var(--subtitle);
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.body__modal--sandwich-ctn-composition-elt {
+    font-family: var(--text);
+    font-size: 1rem;
+    margin-bottom: .5rem;
+}
+
+.body__modal--sandwich-ctn-info {
+    font-family: var(--text);
+    font-size: .8rem;
+    font-style: italic;
+    margin-bottom: .5rem;
+}
+
+.body__modal--sandwich-btn-menu, .body__modal--sandwich-btn-solo {
+    width: 40%;
+    padding: 0 1rem;
+    height: 3rem;
+    border-radius: 5px;
+    margin: .5rem;
+    background-color: rgb(78, 117, 111);
+    color: white;
+    font-weight: 700;
+}
+
+.body__modal--sandwich-btn-solo {
+    background-color: rgb(72, 89, 119);
+}
+
+.body__modal--sandwich-btn-menu::before {
+    content:  "MENU ";
+    font-size: .8rem;
+}
+
+.body__modal--sandwich-btn-solo::before {
+    content: "SANDWICH ";
+    text-align: center;
+    margin-left: -10%;
 }
 

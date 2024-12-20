@@ -89,7 +89,7 @@ body {
 }
 
 .body__footer--link {
-    color: var(--colorSubtitle);
+    color: var(--colorBg);
     font-family: var(--text);
     font-size: .9rem;
     text-align: center;
