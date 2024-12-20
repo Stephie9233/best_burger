@@ -1,3 +1,4 @@
+// import { createContentModale } from "modale.js"
 console.log("script chargé");
 
 /*********** PAGE CARTE ***********/
@@ -62,7 +63,7 @@ const carte = [
             {
                 name: "French burger", 
                 composition: ["1 steak 90 g", "crème de camembert"],
-                picture: "./img/menus/rustik/french_burger", 
+                picture: "./img/menus/rustik/french_burger.png", 
                 price_menu: 11.90,
                 price: 8.00
             },
@@ -101,59 +102,72 @@ const carte = [
         sandwiches: [
             {
                 name: "Duo 1", 
-                composition: ["1 double cheese", "1 cheese burger"], 
+                composition: ["1 double cheese", "1 cheese burger"],
+                picture: "./img/menus/burgers/duo_1.png", 
                 price: 13.70
             },
             {
                 name: "Duo 2", 
-                composition: ["1 chicken burger", "1 cheese burger"], 
+                composition: ["1 chicken burger", "1 cheese burger"],
+                picture: "./img/menus/burgers/duo_2.png", 
                 price: 13.70
             },
             {
                 name: "Duo 3", 
                 composition: ["1 croq Monsieur", "1 cheese burger"], 
+                picture: "./img/menus/burgers/duo_3.png",
                 price: 13.50
             },
             {
-                name: "A1 - Chesse & Cheese",  
+                name: "A1 - Chesse & Cheese",
+                picture: "./img/menus/doubles/A1.png",  
                 price: 12.50
             },
             {
-                name: "A2 - Cheese & Double Cheese Bacon",  
+                name: "A2 - Cheese & Double Cheese Bacon",
+                picture: "./img/menus/doubles/A2.png",
                 price: 13.80
             },
             {
-                name: "A3 - Cheese & Big M", 
+                name: "A3 - Cheese & Big M",
+                picture: "./img/menus/doubles/A3.png",
                 price: 13.90
             },
             {
-                name: "A4 - Cheese & Big Max",  
+                name: "A4 - Cheese & Big Max",
+                picture: "./img/menus/doubles/A4.png",
                 price: 17.50
             },
             {
-                name: "A5 - Cheese & Beef Chicken", 
+                name: "A5 - Cheese & Beef Chicken",
+                picture: "./img/menus/doubles/A5.png",
                 price: 15.80
             },
             {
-                name: "A6 - Cheese & Chicken", 
+                name: "A6 - Cheese & Chicken",
+                picture: "./img/menus/doubles/A6.png",
                 price: 13.80
             },
             {
-                name: "A7 - Cheese & Croq Mr", 
+                name: "A7 - Cheese & Croq Mr",
+                picture: "./img/menus/doubles/A7.png",
                 price: 12.80
             },
             {
-                name: "A9 - Big M & Big M", 
+                name: "A9 - Big M & Big M",
+                picture: "./img/menus/doubles/A8.png",
                 price: 16.70
             },
             {
-                name: "A9 - Big M & Chicken", 
+                name: "A9 - Big M & Chicken",
+                picture: "./img/menus/doubles/A9.png",
                 composition: ["1 chicken burger", "1 cheese burger"], 
                 price: 13.70
             },
             {
                 name: "A10 - Big M & Beef Chicken", 
-                composition: ["1 croq Monsieur", "1 cheese burger"], 
+                composition: ["1 croq Monsieur", "1 cheese burger"],
+                picture: "./img/menus/doubles/A10.png",
                 price: 16.90
             },
         ]
@@ -163,17 +177,20 @@ const carte = [
         sandwiches: [
             {
                 name: "Tacos simple",
-                composition: "1 viande au choix",  
+                composition: "1 viande au choix",
+                picture: "./img/menus/tacos/simple.png",  
                 price: 13.90
             },
             {
                 name: "Tacos double",
-                composition: "2 viandes au choix",  
+                composition: "2 viandes au choix",
+                picture: "./img/menus/tacos/double.png",  
                 price: 14.90
             },
             {
                 name: "Tacos triple",
-                composition: "3 viandes au choix", 
+                composition: "3 viandes au choix",
+                picture: "./img/menus/tacos/triple.png", 
                 price: 15.90
             },
         ]
@@ -183,91 +200,106 @@ const carte = [
         sandwiches: [
             {
                 name: "Grec", 
-                composition: ["kebab"], 
+                composition: ["kebab"],
+                picture: "./img/menus/sandwiches/grec.png", 
                 price_menu: 12.90,
                 price: 10.90
             },
             {
                 name: "Chicken curry", 
-                composition: ["Escalope de poulet mariné au curry", "cheddar"], 
+                composition: ["Escalope de poulet mariné au curry", "cheddar"],
+                picture: "./img/menus/sandwiches/chicken_curry.png", 
                 price_menu: 12.90,
                 price: 10.90
             },
             {
                 name: "Steak", 
-                composition: ["2 steaks 45 g", "cheddar"], 
+                composition: ["2 steaks 45 g", "cheddar"],
+                picture: "./img/menus/sandwiches/steak.png", 
                 price_menu: 12.90,
                 price: 10.90
             },
             {
                 name: "Chicken tandoori", 
-                composition: ["Escalope de poulet mariné au tandoori", "cheddar"], 
+                composition: ["Escalope de poulet mariné au tandoori", "cheddar"],
+                picture: "./img/menus/sandwiches/chicken_tandoori.png", 
                 price_menu: 12.90,
                 price: 10.90
             },
             {
                 name: "Chicken olives", 
-                composition: ["Escalope de poulet", "olive verte", "cheddar"], 
+                composition: ["Escalope de poulet", "olive verte", "cheddar"],
+                picture: "./img/menus/sandwiches/chicken_olives.png", 
                 price_menu: 12.90,
                 price: 10.90
             },
             {
                 name: "Végétarien", 
-                composition: ["Galette de pomme de terre", "oeuf", "cheddar"], 
+                composition: ["Galette de pomme de terre", "oeuf", "cheddar"],
+                picture: "./img/menus/sandwiches/vegetarien.png", 
                 price_menu: 12.90,
                 price: 10.90
             },
             {
                 name: "Suisse", 
-                composition: ["Escalope de poulet", "emmental"], 
+                composition: ["Escalope de poulet", "emmental"],
+                picture: "./img/menus/sandwiches/suisse.png", 
                 price_menu: 12.90,
                 price: 10.90
             },
             {
                 name: "Roll chicken", 
-                composition: ["3 pièces tenders", "2 chedar"], 
+                composition: ["3 pièces tenders", "2 chedar"],
+                picture: "./img/menus/sandwiches/roll_chicken.png", 
                 price_menu: 12.90,
                 price: 10.90
             },
             {
                 name: "Mix boursin", 
-                composition: ["Escalope de poulet", "1 steak 45 g", "boursin", "cheddar fondu"], 
+                composition: ["Escalope de poulet", "1 steak 45 g", "boursin", "cheddar fondu"],
+                picture: "./img/menus/xtrem/mix_boursin.png", 
                 price_menu: 13.90,
                 price: 11.90
             },
             {
                 name: "Triple X", 
-                composition: ["3 steaks 45 g", "1 oeuf", "1 bacon", "2 cheddar"], 
+                composition: ["3 steaks 45 g", "1 oeuf", "1 bacon", "2 cheddar"],
+                picture: "./img/menus/xtrem/triple_x.png", 
                 price_menu: 13.90,
                 price: 11.90
             },
             {
                 name: "Ciabatta", 
-                composition: ["Pain ciabatta", "4 steaks 45 g", "2 cheddar", "2 emmental"], 
+                composition: ["Pain ciabatta", "4 steaks 45 g", "2 cheddar", "2 emmental"],
+                picture: "./img/menus/xtrem/ciabatta.png", 
                 price_menu: 13.90,
                 price: 11.90
             },
             {
                 name: "The best", 
-                composition: ["100 g viande hachée maison", "1 galette de pomme de terre", "2 emmental"], 
+                composition: ["100 g viande hachée maison", "1 galette de pomme de terre", "2 emmental"],
+                picture: "./img/menus/xtrem/the_best.png", 
                 price_menu: 13.90,
                 price: 11.90
             },
             {
                 name: "Chormi X", 
-                composition: ["3 steaks 45 g", "chorizo", "2 cheddar"], 
+                composition: ["3 steaks 45 g", "chorizo", "2 cheddar"],
+                picture: "./img/menus/xtrem/chormi_x.png", 
                 price_menu: 13.90,
                 price: 11.90
             },
             {
                 name: "Salami X", 
-                composition: ["3 steaks 45 g", "oeuf", "salami", "cheddar"], 
+                composition: ["3 steaks 45 g", "oeuf", "salami", "cheddar"],
+                picture: "./img/menus/xtrem/salami_x.png", 
                 price_menu: 13.90,
                 price: 11.90
             },
             {
                 name: "Fermière", 
                 composition: ["1 escalope de poulet", "lardons de dinde fumée", "crème de camembert"], 
+                picture: "./img/menus/xtrem/fermiere.png",
                 price_menu: 13.90,
                 price: 11.90
             },
@@ -278,32 +310,38 @@ const carte = [
         sandwiches: [
             {
                 name: "Grec", 
-                composition: ["Viande de kebab"], 
+                composition: ["Viande de kebab"],
+                picture: "./img/menus/assiettes/grec.png", 
                 price: 15.90
             },
             {
                 name: "Chicken curry", 
-                composition: ["Escalope de poulet mariné au curry", "cheddar fondu"], 
+                composition: ["Escalope de poulet mariné au curry", "cheddar fondu"],
+                picture: "./img/menus/assiettes/chicken_curry.png",
                 price: 15.90
             },
             {
                 name: "Chicken tandoori", 
-                composition: ["Escalope de poulet mariné au tandoori", "cheddar fondu"], 
+                composition: ["Escalope de poulet mariné au tandoori", "cheddar fondu"],
+                picture: "./img/menus/assiettes/chicken_tandoori.png",
                 price: 15.90
             },
             {
                 name: "Steak", 
-                composition: ["Viande hachée maison 150 g", "cheddar fondu"], 
+                composition: ["Viande hachée maison 150 g", "cheddar fondu"],
+                picture: "./img/menus/assiettes/steak.png",
                 price: 15.90
             },
             {
                 name: "Chicken olive", 
-                composition: ["Escalope de poulet", "olives vertes", "cheddar fondu"], 
+                composition: ["Escalope de poulet", "olives vertes", "cheddar fondu"],
+                picture: "./img/menus/assiettes/chicken_olive.png",
                 price: 15.90
             },
             {
                 name: "Suisse", 
-                composition: ["Escalope de poulet", "emmental fondu"], 
+                composition: ["Escalope de poulet", "emmental fondu"],
+                picture: "./img/menus/assiettes/suisse.png",
                 price: 15.90
             },
         ]
@@ -312,47 +350,56 @@ const carte = [
         category: "Croqs & Paninis",
         sandwiches: [
             {
-                name: "Croq Mr",  
+                name: "Croq Mr",
+                picture: "./img/menus/croqs/croq_mr.png",  
                 price_menu: 10.90,
                 price: 7.90
             },
             {
-                name: "Croq Madame", 
+                name: "Croq Madame",
+                picture: "./img/menus/croqs/croq_mme.png", 
                 price_menu: 10.90,
                 price: 7.90
             },
             {
-                name: "Croq chèvre", 
+                name: "Croq chèvre",
+                picture: "./img/menus/croqs/croq_chevre.png", 
                 price_menu: 10.90,
                 price: 7.90
             },
             {
-                name: "Croq boursin", 
+                name: "Croq boursin",
+                picture: "./img/menus/croqs/croq_mr.png", 
                 price_menu: 10.90,
                 price: 7.90
             },
             {
-                name: "Croq viande hachée", 
+                name: "Croq viande hachée",
+                picture: "./img/menus/croqs/croq_viande_hachee.png", 
                 price_menu: 10.90,
                 price: 7.90
             },
             {
-                name: "Panini viande hachée",  
+                name: "Panini viande hachée",
+                picture: "./img/menus/paninis/viande_hachee.png",  
                 price_menu: 10.90,
                 price: 7.90
             },
             {
-                name: "Panini poulet", 
+                name: "Panini poulet",
+                picture: "./img/menus/paninis/poulet.png", 
                 price_menu: 10.90,
                 price: 7.90
             },
             {
-                name: "Panini 3 fromages", 
+                name: "Panini 3 fromages",
+                picture: "./img/menus/paninis/3_fromages.png", 
                 price_menu: 10.90,
                 price: 7.90
             },
             {
-                name: "Panini thon", 
+                name: "Panini thon",
+                picture: "./img/menus/paninis/thon.png", 
                 price_menu: 10.90,
                 price: 7.90
             },
@@ -363,12 +410,14 @@ const carte = [
         sandwiches: [
             {
                 name: "Salade César", 
-                composition: ["salade", "tomates", "maïs", "olives", "poulet émincé"], 
+                composition: ["salade", "tomates", "maïs", "olives", "poulet émincé"],
+                picture: "./img/menus/salades/cesar.png",
                 price: 9.90
             },
             {
                 name: "Salade niçoise", 
-                composition: ["Salade", "tomates", "maïs", "olives", "thon"], 
+                composition: ["Salade", "tomates", "maïs", "olives", "thon"],
+                picture: "./img/menus/salades/nicoise.png",
                 price: 9.90
             },
         ]
@@ -378,12 +427,14 @@ const carte = [
         sandwiches: [
             {
                 name: "Frites", 
-                composition: ["La barquette"], 
+                composition: ["La barquette"],
+                picture: "./img/menus/accompagnement/frites.png", 
                 price: 4.90
             },
             {
                 name: "Potatoes", 
-                composition: ["La barquette"], 
+                composition: ["La barquette"],
+                picture: "./img/accompagnements/potatoes.png", 
                 price: 4.90
             },
         ]
@@ -393,12 +444,14 @@ const carte = [
         sandwiches: [
             {
                 name: "Tarte au daim", 
-                composition: ["Part de tarte au chocolat et au daim"], 
+                composition: ["Part de tarte au chocolat et au daim"],
+                picture: "./img/desserts/tarte_au_daim.png", 
                 price: 4.90
             },
             {
                 name: "Tiramisu", 
-                composition: ["Dessert traditionnel de la cuisine italienne"], 
+                composition: ["Dessert traditionnel de la cuisine italienne"],
+                picture: "./img/desserts/tiramisu.png", 
                 price: 4.90
             },
         ]
@@ -408,77 +461,92 @@ const carte = [
         sandwiches: [
             {
                 name: "7up mojito", 
-                composition: ["33 cl"], 
+                composition: ["33 cl"],
+                picture: "./img/boissons/7up.png",
                 price: 2.50
             },
             {
                 name: "Fanta exotic", 
-                composition: ["33 cl"], 
+                composition: ["33 cl"],
+                picture: "./img/boissons/fanta_exotic.png",
                 price: 2.50
             },
             {
                 name: "Oasis tropical", 
-                composition: ["33 cl"], 
+                composition: ["33 cl"],
+                picture: "./img/boissons/oasis_tropical.png", 
                 price: 2.50
             },
             {
                 name: "Coca-Cola", 
                 composition: ["33 cl"], 
+                picture: "./img/boissons/coca_cola.png",
                 price: 2.50
             },
             {
                 name: "Cristaline", 
-                composition: ["33 cl"], 
+                composition: ["33 cl"],
+                picture: "./img/boissons/cristaline.png", 
                 price: 2.50
             },
             {
                 name: "Coca-Cola zéro sucres", 
-                composition: ["33 cl"], 
+                composition: ["33 cl"],
+                picture: "./img/boissons/coca_cola_zero.png",
                 price: 2.50
             },
             {
                 name: "Coca-Cola cherry", 
-                composition: ["33 cl"], 
+                composition: ["33 cl"],
+                picture: "./img/boissons/coca_cola_cherry.png", 
                 price: 2.50
             },
             {
                 name: "Ice tea", 
-                composition: ["33 cl"], 
+                composition: ["33 cl"],
+                picture: "./img/boissons/ice_tea.png", 
                 price: 2.50
             },
             {
                 name: "Perrier", 
-                composition: ["33 cl"], 
+                composition: ["33 cl"],
+                picture: "./img/boissons/perrier.png", 
                 price: 2.50
             },
             {
                 name: "Fanta orange", 
-                composition: ["33 cl"], 
+                composition: ["33 cl"],
+                picture: "./img/boissons/fanta_orange.png",
                 price: 2.50
             },
             {
                 name: "Oasis pomme cassis", 
-                composition: ["33 cl"], 
+                composition: ["33 cl"],
+                picture: "./img/boissons/oasis_pomme_cassis.png",
                 price: 2.50
             },
             {
                 name: "Tropico", 
-                composition: ["33 cl"], 
+                composition: ["33 cl"],
+                picture: "./img/boissons/tropico.png",
                 price: 2.50
             },
             {
                 name: "Schweppes agrumes", 
-                composition: ["33 cl"], 
+                composition: ["33 cl"],
+                picture: "./img/boissons/schweppes_agrume.png", 
                 price: 2.50
             },
             {
                 name: "Orangina", 
-                composition: ["33 cl"], 
+                composition: ["33 cl"],
+                picture: "./img/boissons/orangina.png", 
                 price: 2.50
             },
             {
                 name: "Freez grenadine", 
-                composition: ["275 ml"], 
+                composition: ["275 ml"],
+                picture: "./img/boissons/freez_grenadine.png", 
                 price: 3.40
             },
         ]
@@ -514,21 +582,54 @@ function addCard(category) {
 // Gestion du click sur une carte et ouverture de la modale contenant les sandwiches 
 
 // On sélectionne la modale
-const modal = document.querySelector(".body__modal");
+const card = document.querySelector(".body__main--ctn-cards");
+const modal = document.querySelector("dialog");
 // On cible le container de cartes
-const ctnCardsElement = document.querySelector(".body__main--ctn-cards");
+const ctnCardsElement = document.querySelector(".body__modal--ctn-cards");
 // On cible le titre de la modale
-
+const title = document.querySelector(".body__modal--title"); 
 let found;
+let contentModal = [];
+let close = [];
+//console.log(close);
+
+
+function createContentModale(found) {
+    const closeCrossElement = document.createElement("p");
+    closeCrossElement.classList.add("closed");    
+    closeCrossElement.textContent = "X";
+    closeCrossElement.id = "close";
+    close.push(closeCrossElement);
+    const title = document.createElement("h2");
+    title.classList.add("body__modal--title");
+    title.textContent = found.category;
+    const ctnCardsElement = document.createElement("section");
+    ctnCardsElement.classList.add("body__modal--ctn-cards");
+    const closeBtnElement = document.createElement("button");
+    closeBtnElement.classList.add("closed");
+    closeBtnElement.id = "closeBtn";
+    closeBtnElement.textContent = "fermer";
+    close.push(closeBtnElement);
+    modal.appendChild(closeCrossElement);
+    modal.appendChild(title); 
+    modal.appendChild(ctnCardsElement); 
+    modal.appendChild(closeBtnElement);
+    contentModal.push(closeCrossElement, title, ctnCardsElement, closeBtnElement);
+    //console.log(contentModal);
+    
+    displaySandwiches(found);     
+};
 
 // On écoute le click sur le container
-ctnCardsElement.addEventListener("click", (e) => {
+card.addEventListener("click", (e) => {
     // On récupère la cible du click
-    const targetElement = e.target;
+    let targetElement = e.target;
     //console.log(targetElement);
     // On récupère la catégorie 
     getCategoryByClick(targetElement);
     modal.showModal();
+    openDetailsSandwich();
+    closeModalByClick()
 })
 
 function getCategoryByClick(targetElement) {
@@ -544,58 +645,94 @@ function getCategoryByClick(targetElement) {
 
     // On récupère dans le tableau carte la catégorie qui correspond à la value
     found = carte.find((el) => el.category.toUpperCase() === value.toUpperCase())
-    console.log(found); 
+    //console.log(found);
+    // on construit la modale
+    createContentModale(found) 
     // On affiche les sandwiches dans le ctn de la modale
-    displaySandwiches(found);       
+    //       
 };
    
 // Pour chaque sandwich de la catégorie on rajoute une carte au ctn
-function displaySandwiches(found) {
-    const title = document.querySelector(".body__modal--title");      
-    title.textContent = found.category;
-    // On rajoute le titre de la catégorie dans la modale
-    modal.appendChild(title);
+function displaySandwiches(found) { 
     // Pour chaque sandwich de la catégorie, on créé une carte
     for(const sandwich of found.sandwiches) {
         addSandwich(sandwich);
     } 
-}
+};
 
 function addSandwich(sandwich) {
+    //console.log(sandwich);
+    
     // on créé la carte
     const cardElement = document.createElement("div");
-    cardElement.classList.add("body__modal--ctn-card");
+    cardElement.classList.add("body__modal--ctn-cards-card");
+    cardElement.id = `${sandwich.name}`;
+    // pour le reset à la fermeture de la modale
+    cardElement.classList.add("variable");
+    const imgElement = document.createElement("img");
+    imgElement.classList.add("body__modal--img");
+    // pour le reset à la fermeture de la modale
+    imgElement.classList.add("variable");
+    imgElement.setAttribute("src", `${sandwich.picture}`);
+    imgElement.setAttribute("alt", `photo ${sandwich.name}`);
+    
     // on crée le nom
     const nameElement = document.createElement("h3");
     nameElement.classList.add("body__modal--ctn-card-name");
+    // pour le reset à la fermeture de la modale
+    nameElement.classList.add("variable");
     nameElement.textContent = sandwich.name;
-    // on l'insère dans la carte
+    
+    // on insère les éléments dans la carte
+    cardElement.appendChild(imgElement);
     cardElement.appendChild(nameElement);
+    
+    
+    // on insère la carte dans le ctn
+    document.querySelector(".body__modal--ctn-cards").appendChild(cardElement);
+};
 
-    // on créé la composition
-    const compositionElement = document.createElement("p");
-    compositionElement.classList.add("body__modal--ctn-card-composition");
-    let text = getComposition(sandwich);
-    compositionElement.textContent = text;
-    
-    cardElement.appendChild(compositionElement); 
-    modal.appendChild(cardElement);
+function closeModalByClick() {
+    const closeElement = document.querySelectorAll(".closed");
+    //console.log(closeElement);
+    for(const el of closeElement) {
+        console.log(el);
+        el.addEventListener("click", () => {
+            console.log("alors, on veut fermer la modale ? Rêve !");
+            for(const element of contentModal) {
+                element.remove()
+                console.log("éléments supprimés");               
+            }
+            modal.close()            
+        })        
+    }    
 }
-    
-function getComposition(sandwich) {
-    if(!sandwich.composition) {
-        return;
+
+function openDetailsSandwich() {
+    const cards = document.querySelectorAll(".body__modal--ctn-cards-card")
+    console.log(cards);
+    for(const card of cards) {
+        card.addEventListener("click", (e) => {
+            const target = e.target;
+            console.log(target); 
+            getDetailsSandwich(target);           
+        })
+    }    
+}
+
+function getDetailsSandwich(target) {
+    let value = target.firstChild.nodeValue;
+    console.log(value);
+    if(value == undefined || value == null) {
+        value = target.attributes[1].textContent;
+        console.log(value);       
     }
-    text = '';
-    for(const ingredient of sandwich.composition) {       
-        text += `${ingredient},`; 
-        console.log(text);
-        return text
-    }
+    found = carte.find((el) => el.sandwiches.name.toUpperCase() === value.toUpperCase());
     
-}   
-    
-//}
+}
+
+  
+
 
 
 // Gestion de l'affichage des modales au click
