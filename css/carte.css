@@ -162,7 +162,7 @@
 
 .body__modal--ctn-cards-card {
     width: 75%;
-    height: fit-content;
+    height: max-content;
     border: .25px solid var(--colorSubtitle);
     border-radius: 5px;
     padding: .5rem 0 .5rem 1rem;
@@ -358,6 +358,17 @@
         text-align: center;
         color: var(--colorSubtitle);
     }
+
+    .body__modal--sandwich-btn-menu, .body__modal--sandwich-btn-solo {
+        width: 40%;
+        font-size: .8rem;
+        color: var(--colorBg);
+    }
+
+    .body__modal--sandwich-btn-solo::before, .body__modal--sandwich-btn-menu::before {
+        font-size: .8rem;
+        color: white;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -381,16 +392,7 @@
         font-size: 1.2rem;
     }
 
-    .body__modal--sandwich-btn-menu, .body__modal--sandwich-btn-solo {
-        width: 40%;
-        font-size: 1rem;
-        color: var(--colorBg);
-    }
-
-    .body__modal--sandwich-btn-solo::before, .body__modal--sandwich-btn-menu::before {
-        font-size: 1rem;
-        color: white;
-    }
+    
 
     #closeSandwich {
         font-size: 2rem;
