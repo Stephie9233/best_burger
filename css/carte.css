@@ -247,7 +247,7 @@
 
     .body__modal--ctn-cards-card {
         width: 65%;
-        height: 4.5rem;
+        height: fit-content;
     }
 
     .body__modal--img {
