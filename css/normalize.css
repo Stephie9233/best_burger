@@ -33,7 +33,8 @@ body {
 
     --colorBg: #f1f1f1;
     --colorSubtitle: #E108AB;
-    --colorText: #000;
+    --colorTitle: #5136b3;
+    --colorText: #000; 
 }
 
 .body__header {

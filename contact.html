@@ -4,21 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/contact.css">
     <title>Document</title>
 </head>
 <body class="body">
     <header class="body__header">
-        <h1 class="body__header--title"><span class="body__header--title-pink">best</span><img src="img/logo.png" alt="Logo Best Burger" class="body__header--title-logo"><span class="body__header--title-white">burger</span></h1>
+        <h1 class="body__header--title">
+            <span class="body__header--title-pink">best</span>
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo Best Burger" class="body__header--title-logo">
+            </a>
+            <span class="body__header--title-white">burger</span>
+        </h1>
     </header>
     <main class="body__main">
+        <section class="body__main--ctn">
+            <h2 class="body__main--ctn-title">NOUS CONTACTER</h2>
+            <form action="#" method="post" class="body__main--ctn-form">
+                <article class="body__main--ctn-form-div">
+                    <label for="nickname" class="body__main--ctn-form-div-label">Pseudo : </label>
+                    <input type="text" name="nickname" id="nickname" class="body__main--ctn-form-div-input">
+                </article>
+                <article class="body__main--ctn-form-div">
+                    <label for="email" class="body__main--ctn-form-div-label">Email : </label>
+                    <input type="text" name="email" id="email" class="body__main--ctn-form-div-input">
+                </article>
+                <article class="body__main--ctn-form-div">
+                    <label for="emailConfirm" class="body__main--ctn-form-div-label">Confirmation email : </label>
+                    <input type="text" name="emailConfirm" id="emailConfirm" class="body__main--ctn-form-div-input">
+                </article>
+                <article class="body__main--ctn-form-div">
+                    <label for="message" class="body__main--ctn-form-div-label">Message : </label>
+                    <input type="text" name="message" id="message" class="body__main--ctn-form-div-input">
+                </article>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
 
     </main>
     <footer class="body__footer">
         <a href="contact.html">
-            <h3 class="body__footer--link">Contact - avis</h3>
+            <h3 class="body__footer--link">Contact</h3>
         </a>
         <a href="plan.html">
-            <h3 class="body__footer--link">Plan - Horaires</h3>
+            <h3 class="body__footer--link">Plan</h3>
         </a>
         <a href="mentions.html">
             <h3 class="body__footer--link">Mentions légales</h3>
