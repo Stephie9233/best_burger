@@ -12,18 +12,19 @@
     width: 80%;
     margin-bottom: 1.2rem;
     border-radius: 5px;
+    border: 3px solid var(--colorTitle);
 }
 
 .body__main--ctn-title {
     font-family: var(--subtitle);
-    color: var(--colorSubtitle);
+    color: var(--colorTitle);
     font-size: 1.5rem;
     text-transform: uppercase;
     margin: .5rem 0;
 }
 
 .body__main--ctn-intro {
-    border: 1px solid var(--colorSubtitle);
+    border: 1px solid var(--colorTitle);
     border-radius: 5px;
     padding: .5rem;
     background-color: white;
@@ -41,13 +42,75 @@
     width: 70%;
     height: 3rem;
     border-radius: 15px;
-    margin: .4rem auto 1rem;
-    background-color: var(--colorSubtitle);
+    margin: .4rem auto 1rem auto;
+    background-color: var(--colorTitle);
     text-decoration: none;
     color: var(--colorBg);
     font-family: var(--subtitle);
     font-size: 1rem;
     font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: .25rem 0;
+    padding: auto 0;
+}
+
+@media screen and (min-width:425px ) {
+    .body__main--ctn-picture {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 525px) {
+    .body__main--ctn {width: 80%;}
+    
+    .body__main--ctn-picture {width: 65%;}
+
+    .body__main--ctn-intro-txt {font-size: .9rem;}
+}
+
+@media screen and (min-width: 768px) {
+    .body__main--ctn {width: 80%;}
+    
+    .body__main--ctn-picture {width: 60%;}
+
+    .body__main--ctn-intro-txt {font-size: .9rem;}
+
+    .body__main--ctn-btn {width: 55%;}
+}
+
+@media screen and (min-width: 1024px) {
+    .body__main--ctn {width: 80%;}
+    
+    .body__main--ctn-picture {
+        width: 50%;
+    }
+
+    .body__main--ctn-intro {
+        width: 60%;
+    }
+
+    .body__main--ctn-intro-txt {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    
+    .body__main--ctn-picture {
+        width: 40%;
+    }
+
+    .body__main--ctn-intro {
+        max-width: 55%;
+    }
+
+    .body__main--ctn-intro-txt {
+        font-size: 1rem;
+    }
+
+    .body__main--ctn-btn {
+        width: 30%;
+    }
 }
