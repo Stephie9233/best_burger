@@ -60,9 +60,15 @@ body {
     text-align: right;
 }
 
-.body__header--title-logo {
+.body__header--title a {
     height: 12vh;
     width: 33%;
+    margin: 0 auto;
+}
+
+.body__header--title-logo {
+    height: 12vh;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -88,10 +94,15 @@ body {
     align-items: center;
 }
 
+.body__footer a {
+    text-decoration: none;
+    width: 25%;
+}
+
 .body__footer--link {
     color: var(--colorBg);
     font-family: var(--text);
     font-size: .9rem;
     text-align: center;
-    width: 25%;
+    
 }

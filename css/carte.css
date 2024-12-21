@@ -60,7 +60,7 @@
     background: #000;
 }
 
-#close {
+#close, #closeSandwich {
     position: relative;
     left: 90%;
     color: var(--colorSubtitle);

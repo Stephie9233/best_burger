@@ -694,7 +694,7 @@ function addSandwich(sandwich) {
 };
 
 function closeModalByClick() {
-    const closeElement = document.querySelectorAll(".closed");
+    const closeElement = document.querySelectorAll(".closed");    
     //console.log(closeElement);
     for(const el of closeElement) {
         console.log(el);
@@ -709,16 +709,17 @@ function closeModalByClick() {
     }    
 }
 
-function closeModalSandwichByClick() {
-    const close = document.querySelector(".close");
-    //console.log(closeElement);
+function closeModalSandwichByClick(sandwichContent) {
+    console.log(sandwichContent);
+    const close = document.querySelector("#closeSandwich");
     close.addEventListener("click", () => {
         console.log("alors, on veut fermer la modale ? Rêve !");
-        for(const element of contentModal) {
+        for(const element of sandwichContent) {
+
             element.remove()
             console.log("éléments supprimés");               
         }
-        modalSandwich.close()            
+        document.querySelector(".body__modal--sandwich").close()            
     })        
 }
 
@@ -732,14 +733,9 @@ function openDetailsSandwich() {
             //console.log(target); 
             getDetailsSandwich(target);
             modalSandwich.showModal()
-            document.querySelector("#close").addEventListener("click", () => {
-                console.log("click");
-                
-                modalSandwich.close()
-            })           
-        })
+            closeModalSandwichByClick(sandwichContent)
+        })           
     }
-
 }
 
 function getDetailsSandwich(target) {
@@ -760,20 +756,22 @@ function getDetailsSandwich(target) {
     console.log(found); 
     createContentModalSandwich(found)   
 }
-
+let sandwichContent = [];
 function createContentModalSandwich(found) {
     let line;
     const closeCrossElement = document.createElement("p");
     closeCrossElement.classList.add("close");    
     closeCrossElement.textContent = "X";
-    closeCrossElement.id = "close";
+    closeCrossElement.id = "closeSandwich";
     close.push(closeCrossElement);
+    sandwichContent.push(closeCrossElement);
     const imgElement = document.createElement("img");
     imgElement.classList.add("body__modal--sandwich-img");
     // pour le reset à la fermeture de la modale
     imgElement.classList.add("variable");
     imgElement.setAttribute("src", `${found.picture}`);
     imgElement.setAttribute("alt", `photo ${found.name}`);
+    sandwichContent.push(imgElement);
     const ctnDetails = document.createElement("section");
     ctnDetails.classList.add("body__modal--sandwich-ctn")
     const title = document.createElement("h2");
@@ -826,6 +824,7 @@ function createContentModalSandwich(found) {
     ctnDetails.appendChild(buttonMenu);
     ctnDetails.appendChild(buttonSolo);
     modalSandwich.appendChild(ctnDetails);
+    sandwichContent.push(ctnDetails)
     if(found.price_menu == undefined || found.price_menu == null) {
         buttonMenu.style.display = "none"
     }
