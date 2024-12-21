@@ -1,0 +1,33 @@
+.body__main {
+    padding: 2rem .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body__main--ctn {
+    width: 95%;
+    height: 97%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.body__main--ctn-title {
+    font-family: var(--subtitle);
+    color: var(--colorTitle);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 1.5rem 0;
+}
+
+.body__main--h3 {
+    width: 80%;
+    height: 10rem;
+    color: var(--colorTitle);
+    text-align: center;
+}
